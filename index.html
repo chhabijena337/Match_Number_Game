@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Match Number Game</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center">
+
+    <div class="game-container w-full max-w-md mx-4 p-8 rounded-3xl">
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+
+            <div class="text-5xl mb-4">🎯</div>
+
+            <h1 class="text-3xl font-bold text-white">
+                Match Number
+            </h1>
+
+            <p class="text-gray-300 mt-3">
+                Guess the correct number between 1 and 10
+            </p>
+
+        </div>
+
+        <!-- Score -->
+        <div class="score-box rounded-xl p-5 text-center mb-6">
+
+            <p class="text-gray-300 text-sm">
+                YOUR SCORE
+            </p>
+
+            <h2 id="score" class="text-4xl font-bold text-white mt-2">
+                0
+            </h2>
+
+        </div>
+
+        <!-- Number Input -->
+        <form id="gameForm">
+
+            <label class="block text-white font-semibold mb-3">
+                Enter Your Number
+            </label>
+
+            <input
+                type="number"
+                id="userNumber"
+                min="1"
+                max="10"
+                placeholder="Enter number 1 - 10"
+                class="w-full p-4 rounded-xl text-center text-xl outline-none"
+                required
+            >
+
+            <!-- Submit Button -->
+            <button
+                type="submit"
+                class="submit-btn w-full mt-5 p-4 rounded-xl font-bold text-white"
+            >
+                Enter Number
+            </button>
+
+        </form>
+
+        <!-- Result -->
+        <div id="result"
+             class="result-box text-center mt-6 p-4 rounded-xl"
+             aria-live="polite">
+
+            <p class="text-gray-300">
+                Start guessing your lucky number!
+            </p>
+
+        </div>
+
+        <!-- Attempts -->
+        <div class="flex justify-between text-white mt-6">
+
+            <span>Attempts</span>
+
+            <span id="attempts" class="font-bold">
+                0
+            </span>
+
+        </div>
+
+        <!-- Reset Button -->
+        <button
+            id="resetBtn"
+            type="button"
+            class="reset-btn w-full mt-5 p-3 rounded-xl font-semibold"
+        >
+            🔄 Reset Game
+        </button>
+
+        <p class="text-center text-gray-400 text-sm mt-7">
+            Made with ❤️ using JavaScript
+        </p>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
